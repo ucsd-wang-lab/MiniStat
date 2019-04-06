@@ -1,12 +1,15 @@
-*.Chris.Brown
-*.rpt
-*.cycdx
-*.cyfit
-*.svd
-*_timing.html
-*.cydsn/codegentemp
-*.cydsn/CortextM0/ARM_GCC_541/* !.cydsn/CortextM0/ARM_GCC_541/*.hex 
-*.cydsn/Export
-*.cydsn/Generated_Source
-*Backup*
-*.log
+*/*.Chris.Brown
+*/*.rpt
+*/*.cycdx
+*/*.cyfit
+*/*.svd
+*/*_timing.html
+*/*.cydsn/codegentemp
+*/*.cydsn/CortexM0/ARM_GCC_541
+*/*.cydsn/Export
+*/*.cydsn/Generated_Source
+*/*Backup*
+*/*.log
+
+#Include hex file
+!*/*.cydsn/CortextM0/ARM_GCC_541/*.hex 
