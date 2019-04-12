@@ -6367,7 +6367,7 @@
         <register>
           <name>CTBM_CTRL</name>
           <description>Global CTB IP and power control</description>
-          <addressOffset>0x40310000</addressOffset>
+          <addressOffset>0x40300000</addressOffset>
           <size>32</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -6416,7 +6416,7 @@
         <register>
           <name>OA_RES_CTRL</name>
           <description>Opamp and resistor control</description>
-          <addressOffset>0x40310008</addressOffset>
+          <addressOffset>0x40300008</addressOffset>
           <size>32</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -6494,7 +6494,7 @@
         <register>
           <name>OA_COMP_TRIM</name>
           <description>Opamp Compenation Capacitor Trim</description>
-          <addressOffset>0x40310F14</addressOffset>
+          <addressOffset>0x40300F14</addressOffset>
           <size>32</size>
           <access>read-write</access>
           <resetValue>0</resetValue>

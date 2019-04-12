@@ -1117,7 +1117,7 @@
     <block name="cy_analog_virtualmux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="cy_analog_virtualmux_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="cy_psoc4_abuf" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="CTBM_CTRL" address="0x40310000" bitWidth="32" desc="Global CTB IP and power control" hidden="false">
+    <register name="CTBM_CTRL" address="0x40300000" bitWidth="32" desc="Global CTB IP and power control" hidden="false">
       <field name="DEEPSLEEP_ON" from="30" to="30" access="RW" resetVal="" desc="Selects component behavior in DeepSleep power mode" hidden="false">
         <value name="DISABLE" value="0" desc="CTB IP disabled off during DeepSleep power mode" />
         <value name="ENABLE" value="1" desc="CTB IP remains enabled during DeepSleep power mode (if ENABLED=1)" />
@@ -1127,7 +1127,7 @@
         <value name="ENABLE" value="1" desc="CTB IP enabledCTB IP enabled" />
       </field>
     </register>
-    <register name="OA_RES_CTRL" address="0x40310008" bitWidth="32" desc="Opamp and resistor control" hidden="false">
+    <register name="OA_RES_CTRL" address="0x40300008" bitWidth="32" desc="Opamp and resistor control" hidden="false">
       <field name="OA_PWR_MODE" from="1" to="0" access="RW" resetVal="" desc="Selects power for opamp" hidden="false">
         <value name="OFF" value="00" desc="Off" />
         <value name="LOW" value="01" desc="Low power" />
@@ -1143,7 +1143,7 @@
         <value name="ENABLE" value="1" desc="Pump enabled" />
       </field>
     </register>
-    <register name="OA_COMP_TRIM" address="0x40310F14" bitWidth="32" desc="Opamp Compenation Capacitor Trim" hidden="false">
+    <register name="OA_COMP_TRIM" address="0x40300F14" bitWidth="32" desc="Opamp Compenation Capacitor Trim" hidden="false">
       <field name="OA_COMP_TRIM" from="1" to="0" access="RW" resetVal="" desc="Opamp Compenation Capacitor Trim" hidden="false">
         <value name="HIGH_SPEED" value="01" desc="High Speed" />
         <value name="BALANCED" value="10" desc="Balanced" />
