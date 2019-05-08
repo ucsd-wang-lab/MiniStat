@@ -1,30 +1,52 @@
 /* ========================================
  *
- * Copyright YOUR COMPANY, THE YEAR
+ * NANOBIOELECTRONICS LAB UCSD, 2019
  * All Rights Reserved
  * UNPUBLISHED, LICENSED SOFTWARE.
  *
  * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
+ * WHICH IS THE PROPERTY OF the company.
  *
  * ========================================
-*/
+ */
+
 #include <project.h>
+
+#define LMP_ADDR 0x48
+#define LMP_REG_MODECN_ADDR 0x12
+#define LMP_3_LEAD_AMPEROMETRIC_CELL_MODE 0x03 
 
 void StackEventHandler( uint32 eventCode, void *eventParam );
 
 int main (void)
 {
-    CyGlobalIntEnable;   /* Enable global interrupts */
+    CyGlobalIntEnable;                // Enable global interrupts
+    CyBle_Start( StackEventHandler ); // Start BLE
+    I2C_Start();                      // Start I2C comm interface
     
-    /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-
-    CyBle_Start( StackEventHandler );
+    uint8 lmpData[] = {LMP_REG_MODECN_ADDR, LMP_3_LEAD_AMPEROMETRIC_CELL_MODE};
+    uint32 lmpDataCount = 2;
+    uint8 lmpXferInitiated = 0;
     
-    for(;;)
-    {
-        /* Place your application code here */
-        CyBle_ProcessEvents();
+    while(1)
+    {   
+        if(!lmpXferInitiated)
+        {
+            I2C_I2CMasterWriteBuf(LMP_ADDR, lmpData, lmpDataCount, I2C_I2C_MODE_COMPLETE_XFER);
+            lmpXferInitiated = 1;
+            continue;
+        }
+        else if(I2C_I2CMasterGetWriteBufSize() != lmpDataCount)
+        {
+            // TODO : Add error handling here
+            continue;
+        }
+        
+        CyBle_ProcessEvents(); // Process BLE events
+        
+        LED_1_Write(~LED_1_Read());
+        
+        // TODO : Read AFE_OUT here
     }
 }
 

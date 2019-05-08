@@ -9,7 +9,8 @@
 */*.cydsn/Export
 */*.cydsn/Generated_Source
 */*Backup*
-*/*.log
+*\.log
+*prgzz
 
 #Include hex file
 !*/*.cydsn/CortextM0/ARM_GCC_541/*.hex 
