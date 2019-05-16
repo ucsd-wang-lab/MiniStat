@@ -1,9 +1,9 @@
-*/*.Chris.Brown
-*/*.rpt
-*/*.cycdx
-*/*.cyfit
-*/*.svd
-*/*_timing.html
+*Chris\.Brown
+*/*\.rpt
+*/*\.cycdx
+*/*\.cyfit
+*/*\.svd
+*/*_timing\.html
 */*.cydsn/codegentemp
 */*.cydsn/CortexM0/ARM_GCC_541
 */*.cydsn/Export
