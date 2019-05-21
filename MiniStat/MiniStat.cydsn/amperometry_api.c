@@ -49,3 +49,27 @@ void lmp_setup()
         }
     }
 }
+
+float chrono_amp()
+{
+    int16 adc_result = 0;
+    float volt_reading = 0;
+    
+    ADC_Wakeup();
+    ADC_Start();
+    ADC_StartConvert();
+    
+    CyDelay(100); // Wait 100 ms for conversion to finish
+    
+    adc_result = ADC_GetResult16(AFE_OUT_CHANNEL);
+    volt_reading = ADC_CountsTo_Volts(AFE_OUT_CHANNEL, adc_result);
+    
+    ADC_StopConvert();
+    ADC_Sleep();
+    
+    return volt_reading;
+}
+
+void squarewave_volt_amp()
+{
+}

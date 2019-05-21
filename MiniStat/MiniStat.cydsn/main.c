@@ -12,6 +12,7 @@
 
 #include <project.h>
 #include "amperometry_api.h"
+#include "util.h"
 
 void StackEventHandler( uint32 eventCode, void *eventParam );
 
@@ -20,12 +21,14 @@ int main (void)
     CyGlobalIntEnable;                // Enable global interrupts
     CyBle_Start( StackEventHandler ); // Start BLE
     I2C_Start();                      // Start I2C comm interface
+    UART_Start();                     // Start UART comm interface
     
     lmp_setup(); // Configures LMP91000 through I2C 
         
     while(1)
     {
         // TODO : Read AFE_OUT here
+        
         
         CyBle_ProcessEvents(); // Process BLE events
             
