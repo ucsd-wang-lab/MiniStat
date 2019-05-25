@@ -11,12 +11,9 @@
  */
 
 #include <project.h>
-#include "amperometry_api.h"
-#include "bleHandler.h"
 #include "main.h"
 
 /*Function declarations */
-void StackEventHandler( uint32 eventCode, void *eventParam );
 uint32_t getTick(void);
 void resetTick(void);
 void tickStart(void);
@@ -86,10 +83,6 @@ int main (void)
 {
     CyGlobalIntEnable;                // Enable global interrupts
     tickStart();
-    //bleWake(); // Start BLE
-    I2CM_Start();                      // Start I2C comm interface
-    
-    DBG_PRINTF("\r\n\r\nDBG> %s: FW Version %d.%d.%d, Built: %s, %s\n\r", PROJECT_NAME, FV_MAJOR, FV_MINOR, FV_POINT, COMPILE_TIME, FIRMWARE_DATE);    
     
     //lmp_setup(); // Configures LMP91000 through I2C 
     //LED_2_Write(GPIO_HIGH);    
@@ -106,29 +99,6 @@ int main (void)
             }
             resetTick();            
        } 
-        sysManagePower();
-        //bleManagePower(); // Process BLE events
-    }
-}
-
-uint8_t getSysHibernateFlag(void)
-{
-    return sysHibernate;
-}
-
-void setSysHibernateFlag(uint8_t flag)
-{
-    sysHibernate = flag;
-}
-
-void sysManagePower(void)
-{
-    if (getSysHibernateFlag())
-    {
-        if (getMcuHibernateFlag())
-        {
-            CySysPmHibernate();
-        }
     }
 }
 
