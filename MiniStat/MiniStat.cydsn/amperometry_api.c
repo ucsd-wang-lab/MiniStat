@@ -27,23 +27,23 @@ void lmp_setup()
     {   
         if(lmpXferInitiated == 0)
         {
-            I2C_I2CMasterWriteBuf(LMP_ADDR, lmpModeData, lmpDataCount, 
-                                  I2C_I2C_MODE_COMPLETE_XFER);
+            I2CM_I2CMasterWriteBuf(LMP_ADDR, lmpModeData, lmpDataCount, 
+                                  I2CM_I2C_MODE_COMPLETE_XFER);
             lmpXferInitiated = 1;
         }
         else if(lmpXferFinished == 1 && lmpXferInitiated == 1)
         {
-            I2C_I2CMasterWriteBuf(LMP_ADDR, lmpRefData, lmpDataCount, 
-                                  I2C_I2C_MODE_COMPLETE_XFER);
+            I2CM_I2CMasterWriteBuf(LMP_ADDR, lmpRefData, lmpDataCount, 
+                                  I2CM_I2C_MODE_COMPLETE_XFER);
             lmpXferInitiated = 2;
         }
         else if(lmpXferFinished == 2 && lmpXferInitiated == 2)
         {
-            I2C_I2CMasterWriteBuf(LMP_ADDR, lmpTiaData, lmpDataCount, 
-                                  I2C_I2C_MODE_COMPLETE_XFER);
+            I2CM_I2CMasterWriteBuf(LMP_ADDR, lmpTiaData, lmpDataCount, 
+                                  I2CM_I2C_MODE_COMPLETE_XFER);
             lmpXferInitiated = 3;
         }
-        else if(I2C_I2CMasterGetWriteBufSize() == lmpDataCount)
+        else if(I2CM_I2CMasterGetWriteBufSize() == lmpDataCount)
         {
             lmpXferFinished++;
         }
