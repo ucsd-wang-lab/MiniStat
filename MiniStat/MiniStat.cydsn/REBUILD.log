@@ -1,4 +1,4 @@
---------------- Rebuild Started: 05/25/2019 11:22:10 Project: MiniStat, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Rebuild Started: 05/30/2019 17:58:16 Project: MiniStat, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\main.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\cymetadata.o"
@@ -12,10 +12,6 @@ Deleting file ".\CortexM0\ARM_GCC_541\Debug\LED_2.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\LED_2_PM.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\LED_1.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\LED_1_PM.o"
-Deleting file ".\CortexM0\ARM_GCC_541\Debug\I2C_SDA.o"
-Deleting file ".\CortexM0\ARM_GCC_541\Debug\I2C_SDA_PM.o"
-Deleting file ".\CortexM0\ARM_GCC_541\Debug\I2C_SCL.o"
-Deleting file ".\CortexM0\ARM_GCC_541\Debug\I2C_SCL_PM.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\Cm0Start.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\CyFlash.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\CyLib.o"
@@ -24,12 +20,7 @@ Deleting file ".\CortexM0\ARM_GCC_541\Debug\cyutils.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\CyLFClk.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\cy_em_eeprom.o"
-Deleting file ".\CortexM0\ARM_GCC_541\Debug\DBG_RX.o"
-Deleting file ".\CortexM0\ARM_GCC_541\Debug\DBG_RX_PM.o"
-Deleting file ".\CortexM0\ARM_GCC_541\Debug\DBG_TX.o"
-Deleting file ".\CortexM0\ARM_GCC_541\Debug\DBG_TX_PM.o"
-Deleting file ".\CortexM0\ARM_GCC_541\Debug\AFE_OUT_1.o"
-Deleting file ".\CortexM0\ARM_GCC_541\Debug\AFE_OUT_1_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_541\Debug\MiniStat.hex"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\MiniStat.elf"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\MiniStat.map"
 Deleting file ".\MiniStat.cycdx"
@@ -37,7 +28,7 @@ Deleting file ".\MiniStat.rpt"
 Deleting file ".\MiniStat_timing.html"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\.deps\SOURCE_C__ARM_GCC_GENERIC.P"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\.deps\SOURCE_ASM__ARM_GCC_GENERIC.P"
-cydsfit.exe -.appdatapath "C:\Users\chris.brown\AppData\Local\Cypress Semiconductor\PSoC Creator\4.2" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Lab\MiniStat\Firmware\MiniStat\MiniStat.cydsn\MiniStat.cyprj -d CY8C4247FNI-BL483 -s C:\Lab\MiniStat\Firmware\MiniStat\MiniStat.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit.exe -.appdatapath "C:\Users\chris.brown\AppData\Local\Cypress Semiconductor\PSoC Creator\4.2" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\repos\UCSD\Research\MiniStat\FW\MiniStat\MiniStat\MiniStat.cydsn\MiniStat.cyprj -d CY8C4247FNI-BL483 -s C:\repos\UCSD\Research\MiniStat\FW\MiniStat\MiniStat\MiniStat.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 Elaborating Design...
 HDL Generation...
 Synthesis...
@@ -86,12 +77,12 @@ arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-
 arm-none-eabi-as.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -alh=.\CortexM0\ARM_GCC_541\Debug/CyBootAsmGnu.lst -g -W -o .\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o Generated_Source\PSoC4\CyBootAsmGnu.s
 arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_541\Debug\MiniStat.a .\CortexM0\ARM_GCC_541\Debug\DAC_OUT.o .\CortexM0\ARM_GCC_541\Debug\DAC_OUT_PM.o .\CortexM0\ARM_GCC_541\Debug\AFE_OUT.o .\CortexM0\ARM_GCC_541\Debug\AFE_OUT_PM.o .\CortexM0\ARM_GCC_541\Debug\LDAC.o .\CortexM0\ARM_GCC_541\Debug\LDAC_PM.o .\CortexM0\ARM_GCC_541\Debug\LED_2.o .\CortexM0\ARM_GCC_541\Debug\LED_2_PM.o .\CortexM0\ARM_GCC_541\Debug\LED_1.o .\CortexM0\ARM_GCC_541\Debug\LED_1_PM.o .\CortexM0\ARM_GCC_541\Debug\CyFlash.o .\CortexM0\ARM_GCC_541\Debug\CyLib.o .\CortexM0\ARM_GCC_541\Debug\cyPm.o .\CortexM0\ARM_GCC_541\Debug\cyutils.o .\CortexM0\ARM_GCC_541\Debug\CyLFClk.o .\CortexM0\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM0\ARM_GCC_541\Debug\DBG_RX.o .\CortexM0\ARM_GCC_541\Debug\DBG_RX_PM.o .\CortexM0\ARM_GCC_541\Debug\DBG_TX.o .\CortexM0\ARM_GCC_541\Debug\DBG_TX_PM.o .\CortexM0\ARM_GCC_541\Debug\AFE_OUT_1.o .\CortexM0\ARM_GCC_541\Debug\AFE_OUT_1_PM.o .\CortexM0\ARM_GCC_541\Debug\TEST_I2C_SCL.o .\CortexM0\ARM_GCC_541\Debug\TEST_I2C_SCL_PM.o .\CortexM0\ARM_GCC_541\Debug\TEST_I2C_SDA.o .\CortexM0\ARM_GCC_541\Debug\TEST_I2C_SDA_PM.o .\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o
 arm-none-eabi-ar.exe: creating .\CortexM0\ARM_GCC_541\Debug\MiniStat.a
-arm-none-eabi-gcc.exe -Wl,--start-group -o C:\Lab\MiniStat\Firmware\MiniStat\MiniStat.cydsn\CortexM0\ARM_GCC_541\Debug\MiniStat.elf .\CortexM0\ARM_GCC_541\Debug\main.o .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_541\Debug\cymetadata.o .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o .\CortexM0\ARM_GCC_541\Debug\MiniStat.a -mcpu=cortex-m0 -mthumb -L Generated_Source\PSoC4 -Wl,-Map,.\CortexM0\ARM_GCC_541\Debug/MiniStat.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
-cyelftool.exe -C C:\Lab\MiniStat\Firmware\MiniStat\MiniStat.cydsn\CortexM0\ARM_GCC_541\Debug\MiniStat.elf --flash_row_size 128 --flash_size 131072 --flash_offset 0x00000000
+arm-none-eabi-gcc.exe -Wl,--start-group -o C:\repos\UCSD\Research\MiniStat\FW\MiniStat\MiniStat\MiniStat.cydsn\CortexM0\ARM_GCC_541\Debug\MiniStat.elf .\CortexM0\ARM_GCC_541\Debug\main.o .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_541\Debug\cymetadata.o .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o .\CortexM0\ARM_GCC_541\Debug\MiniStat.a -mcpu=cortex-m0 -mthumb -L Generated_Source\PSoC4 -Wl,-Map,.\CortexM0\ARM_GCC_541\Debug/MiniStat.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C C:\repos\UCSD\Research\MiniStat\FW\MiniStat\MiniStat\MiniStat.cydsn\CortexM0\ARM_GCC_541\Debug\MiniStat.elf --flash_row_size 128 --flash_size 131072 --flash_offset 0x00000000
 No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
-cyelftool.exe -S C:\Lab\MiniStat\Firmware\MiniStat\MiniStat.cydsn\CortexM0\ARM_GCC_541\Debug\MiniStat.elf
-Flash used: 2288 of 131072 bytes (1.7%).
+cyelftool.exe -S C:\repos\UCSD\Research\MiniStat\FW\MiniStat\MiniStat\MiniStat.cydsn\CortexM0\ARM_GCC_541\Debug\MiniStat.elf
+Flash used: 2296 of 131072 bytes (1.8%).
 SRAM used: 3480 of 16384 bytes (21.2%). Stack: 2048 bytes. Heap: 1024 bytes.
---------------- Rebuild Succeeded: 05/25/2019 11:22:48 ---------------
+--------------- Rebuild Succeeded: 05/30/2019 17:58:51 ---------------

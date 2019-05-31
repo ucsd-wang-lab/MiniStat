@@ -3,9 +3,9 @@
   <block name="DAC_OUT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="AFE_OUT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="AFE_OUT_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Em_EEPROM_Dynamic" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_lfclk" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Em_EEPROM_Dynamic" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="DBG_TX" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LED_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LED_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
